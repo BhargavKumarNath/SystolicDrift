@@ -1,0 +1,81 @@
+"""SystolicDrift: cycle-stepped 2D systolic array numerical drift simulator."""
+
+from systolic_drift.dtypes import (
+    SUPPORTED_ACC_DTYPES,
+    SUPPORTED_INPUT_DTYPES,
+    get_acc_caster,
+    mac_step,
+    normalize_dtype_name,
+    quantize_tensor,
+    round_to_bf16,
+    round_to_fp8_e4m3,
+    round_to_fp8_e5m2,
+    round_to_fp16,
+)
+from systolic_drift.metrics import (
+    DriftReport,
+    compute_fp64_reference,
+    cosine_similarity,
+    evaluate_simulation,
+    max_abs_error,
+    mean_abs_error,
+    relative_l2_error,
+    rmse,
+    top_k_percent_outlier_error,
+)
+from systolic_drift.simulator import (
+    SimulationResult,
+    SimulationStats,
+    SystolicArraySimulator,
+    SystolicConfig,
+)
+from systolic_drift.tensors import (
+    LayerWorkload,
+    generate_synthetic_workloads,
+    load_huggingface_workloads,
+    load_workloads,
+)
+from systolic_drift.tiling import (
+    SUPPORTED_LOOP_ORDERS,
+    TileSpec,
+    compute_tile_ranges,
+    generate_tile_schedule,
+    infer_tile_dims,
+    pad_tile_2d,
+)
+
+__all__ = [
+    "DriftReport",
+    "LayerWorkload",
+    "SUPPORTED_ACC_DTYPES",
+    "SUPPORTED_INPUT_DTYPES",
+    "SUPPORTED_LOOP_ORDERS",
+    "SimulationResult",
+    "SimulationStats",
+    "SystolicArraySimulator",
+    "SystolicConfig",
+    "TileSpec",
+    "compute_fp64_reference",
+    "compute_tile_ranges",
+    "cosine_similarity",
+    "evaluate_simulation",
+    "generate_synthetic_workloads",
+    "generate_tile_schedule",
+    "get_acc_caster",
+    "infer_tile_dims",
+    "load_huggingface_workloads",
+    "load_workloads",
+    "mac_step",
+    "max_abs_error",
+    "mean_abs_error",
+    "normalize_dtype_name",
+    "pad_tile_2d",
+    "quantize_tensor",
+    "relative_l2_error",
+    "rmse",
+    "round_to_bf16",
+    "round_to_fp8_e4m3",
+    "round_to_fp8_e5m2",
+    "round_to_fp16",
+    "top_k_percent_outlier_error",
+]
