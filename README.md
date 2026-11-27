@@ -1,11 +1,12 @@
 # SystolicDrift
 
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![Cycle-stepped simulator](https://img.shields.io/badge/Simulator-Cycle--stepped-4C8CBF)
-![Weight-stationary and output-stationary dataflows](https://img.shields.io/badge/Dataflows-WS%20%2F%20OS-6A5ACD)
-![FP16, BF16, and FP32 accumulation](https://img.shields.io/badge/Accumulators-FP16%20%2F%20BF16%20%2F%20FP32-00897B)
-![IEEE round-to-nearest-even](https://img.shields.io/badge/Rounding-IEEE%20RNE-EF6C00)
-![144 controlled runs](https://img.shields.io/badge/Experiments-144%20controlled%20runs-546E7A)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![NumPy 1.24+](https://img.shields.io/badge/NumPy-1.24%2B-013243?logo=numpy&logoColor=white)](https://numpy.org/)
+[![PyTorch 2.1+](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Model SmolLM2-135M](https://img.shields.io/badge/Model-SmolLM2--135M-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/HuggingFaceTB/SmolLM2-135M)
+[![Tests 47 passed](https://img.shields.io/badge/Tests-47_passed-2EA043?logo=pytest&logoColor=white)](#2-run-unit-tests-47-tests-offline-safe)
+[![144 ablation runs](https://img.shields.io/badge/Experiments-144_ablation_runs-546E7A)](docs/REPORT.md)
+[![License MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 **SystolicDrift** is a cycle-stepped 2D systolic array simulator in Python for isolating how **array geometry** (`8x8` vs. `16x16`), **dataflow** (`weight_stationary` vs. `output_stationary`), **tile loop order** (`M-N-K`, `K-M-N`, `K-N-M`), and **accumulator precision** (`FP32`, `FP16`, `BF16`) change floating-point rounding drift on real transformer layers.
 
