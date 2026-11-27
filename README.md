@@ -1,12 +1,12 @@
 # SystolicDrift
 
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![NumPy 1.24+](https://img.shields.io/badge/NumPy-1.24%2B-013243?logo=numpy&logoColor=white)](https://numpy.org/)
-[![PyTorch 2.1+](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Model SmolLM2-135M](https://img.shields.io/badge/Model-SmolLM2--135M-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/HuggingFaceTB/SmolLM2-135M)
-[![Tests 47 passed](https://img.shields.io/badge/Tests-47_passed-2EA043?logo=pytest&logoColor=white)](#2-run-unit-tests-47-tests-offline-safe)
-[![144 ablation runs](https://img.shields.io/badge/Experiments-144_ablation_runs-546E7A)](docs/REPORT.md)
-[![License MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Python 3.10+](figures/badges/python.svg)](https://www.python.org/)
+[![NumPy 1.24+](figures/badges/numpy.svg)](https://numpy.org/)
+[![PyTorch 2.1+](figures/badges/pytorch.svg)](https://pytorch.org/)
+[![Model SmolLM2-135M](figures/badges/model.svg)](https://huggingface.co/HuggingFaceTB/SmolLM2-135M)
+[![Tests 47 passed](figures/badges/tests.svg)](#2-run-unit-tests-47-tests-offline-safe)
+[![Experiments 144 runs](figures/badges/experiments.svg)](docs/REPORT.md)
+[![License MIT](figures/badges/license.svg)](LICENSE)
 
 **SystolicDrift** is a cycle-stepped 2D systolic array simulator in Python for isolating how **array geometry** (`8x8` vs. `16x16`), **dataflow** (`weight_stationary` vs. `output_stationary`), **tile loop order** (`M-N-K`, `K-M-N`, `K-N-M`), and **accumulator precision** (`FP32`, `FP16`, `BF16`) change floating-point rounding drift on real transformer layers.
 
@@ -150,7 +150,7 @@ systolic-drift/
 │   ├── test_simulator.py     # Rounding, single-tile equivalence, edge shapes, cancellation probes
 │   └── test_metrics.py       # Analytical metric checks and non-finite edge cases
 ├── results/                  # Saved ablation_summary.csv and ablation_details.json
-└── figures/                  # Generated PNG charts embedded in README.md and REPORT.md
+└── figures/                  # Generated PNG charts and README SVG badges
 ```
 
 ---
